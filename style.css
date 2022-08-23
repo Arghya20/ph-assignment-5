@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===================
+ Header Section Start
+ =================== */
+.header-section {
+  text-align: center;
+  background-image: url(bg-img.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 20px;
+  position: relative;
+  color: white;
+  border-radius: 0px 0px 10px 10px;
+}
+.header-section > h1 {
+  margin-bottom: 30px;
+}
+.header-section > p {
+  color: #e2dfdf;
+}
+/* ==================
+ Header Section End
+ ================= */
+
+
+  /* main Section Start */
+ .mian-container {
+  width: 100%;
+  margin-top: 100px;
+}
+
+.center-width {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+ /* main Section End */
+
+
+/* =======================
+  All Boxes Section Start 
+  ================== */
+.blog-section {
+  width: 70%;
+}
+
+.all-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.box {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 9px #b6b6b6;
+}
+
+.box-image img {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.box-info {
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.box-info button {
+  padding: 10px 45px;
+  background: lightgreen;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 1px 1px 7px rgb(215, 215, 215);
+  transition: background 0.3s;
+}
+.box-info button:hover {
+  background: rgb(2, 191, 2);
+}
+/* =======================
+  All Boxes Section :end
+ ===================== */
+
+
+
+/*========================
+ Side Bar Section Start 
+ ============ */
+.side-bar {
+  width: 20%;
+}
+
+.sidebar-box {
+  width: 100%;
+  padding: 30px 55px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(120deg, #2c93e1, #ed8ff4);
+  top: 2rem;
+  bottom: 3rem;
+  color: white;
+  box-shadow: 2px 2px 9px #b6b6b6;
+}
+.sidebar-box li {
+  list-style: none;
+}
+.sidebar-box h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px auto;
+  background: #08de21;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor:pointer;
+}
+.sidebar-box input {
+  padding: 10px 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.second {
+  margin-top: 50px;
+  font-size: 18px;
+}
+.margin-bottom {
+  margin-bottom: 25px;
+}
+#error-msg {
+  color: yellow;
+  font-weight: bold;
+  margin-top: 10px;
+}
+/*======================
+ Side Bar Section End
+  ============= */
+
+
+/*======= Footer Section ======== */
+footer p {
+  background: black;
+  text-align: center;
+  margin-top: 200px;
+  padding: 50px 0px;
+  color: white;
+}
