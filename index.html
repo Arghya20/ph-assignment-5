@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choose Your Top 5 Players</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!--======= header Section Start ======= -->
+  <header>
+    <div class="header-section">
+      <h1>Choose your Top 5 Football Players</h1>
+      <p>
+        There has been much debate about who is the world number one football player? Football has evolved since its inception as the current definition of a football game has completely changed. With the help of technology football players in the world are under heavy scrutiny these days and they have been facing more severe challenges every day.
+      </p>
+    </div>
+  </header>
+  <!-- ======== header Section End =========  -->
+  <main>
+    <section class="mian-container">
+      <div class="center-width">
+        <!-- =======All Boxes Section Start====== -->
+        <div class="blog-section">
+          <div class="all-boxes">
+            <div class="box">
+              <div class="box-image">
+                <img
+                  src="https://images.complex.com/complex/images/c_fill,dpr_auto,f_auto,q_auto,w_1400/fl_lossy,pg_1/xyge85zjlddci4jyybf8/lionel-messi?fimg-ssr-default"
+                  alt="" />
+              </div>
+
+              <div class="box-info">
+                <h2>Lionel Messi</h2>
+                <p>40 Goals</p>
+                <button onclick="addToSelected(this)">Select</button>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box-image">
+                <img
+                  src="https://images.newindianexpress.com/uploads/user/imagelibrary/2022/8/7/w1200X800/Neymar_AP.jpg"
+                  alt="" />
+              </div>
+
+              <div class="box-info">
+                <h2>Neymar</h2>
+                <p>32 Goals</p>
+                <button onclick="addToSelected(this)">Select</button>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box-image">
+                <img
+                  src="https://images.livemint.com/img/2022/06/27/1600x900/FILES-US-CRIME-RONALDO-RAPE-0_1656309643415_1656309655197.jpg"
+                  alt="" />
+              </div>
+
+              <div class="box-info">
+                <h2>Ronaldo</h2>
+                <p>39 Goals</p>
+                <button onclick="addToSelected(this)">Select</button>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box-image">
+                <img
+                  src="https://images2.minutemediacdn.com/image/upload/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/shape/cover/sport/Atletico-Madrid-v-Bayer-Leverkusen-Group-D---UEFA--0c12e0e750be5e3c63d44635f9697b96.jpg"
+                  alt="" />
+              </div>
+
+              <div class="box-info">
+                <h2>Jan Oblak</h2>
+                <p>21 Goals</p>
+                <button onclick="addToSelected(this)">Select</button>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box-image">
+                <img
+                  src="https://d3nfwcxd527z59.cloudfront.net/content/uploads/2022/07/14125638/ronaldinho-barcelona-2006.jpg"
+                  alt="" />
+              </div>
+
+              <div class="box-info">
+                <h2>Ronaldinho</h2>
+                <p>23 Goals</p>
+                <button onclick="addToSelected(this)">Select</button>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box-image">
+                <img
+                  src="https://res.cloudinary.com/chelsea-production/image/upload/c_fit,h_630,w_1200/v1/editorial/news/2022/07/24/jorginho_pre-season_2"
+                  alt="" />
+              </div>
+
+              <div class="box-info">
+                <h2>Jorginho</h2>
+                <p>31 Goals</p>
+                <button onclick="addToSelected(this)">Select</button>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box-image">
+                <img src="https://cdn.images.express.co.uk/img/dynamic/67/750x445/1582244.jpg" alt="" />
+              </div>
+
+              <div class="box-info">
+                <h2>Pelé</h2>
+                <p>39 Goals</p>
+                <button onclick="addToSelected(this)">Select</button>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box-image">
+                <img
+                  src="https://www.si.com/.image/t_share/MTgzMjE4MzcwNzM1MjUyODk4/harry-kane-tottenham-man-city-transfer.jpg"
+                  alt="" />
+              </div>
+
+              <div class="box-info">
+                <h2>Harry Kane</h2>
+                <p>32 Goals</p>
+                <button onclick="addToSelected(this)">Select</button>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box-image">
+                <img
+                  src="https://www.si.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTg5MjM0NjkxNjY3MTQyNTQ3/imago1011693569h.jpg"
+                  alt="" />
+              </div>
+
+              <div class="box-info">
+                <h2>Toni Kroos</h2>
+                <p>26 Goals</p>
+                <button onclick="addToSelected(this)">Select</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- =======All Boxes Section end ====== -->
+
+        <!--====== Side bar Start ===== -->
+        <div class="side-bar">
+          <div class="sidebar-box">
+            <div>
+              <h2>Selected - players</h2>
+              <ul id="player-list"></ul>
+              <p id="error-msg"></p>
+            </div>
+          </div>
+
+          <div class="sidebar-box second">
+            <div>
+              <h2>Budget</h2>
+              <p>Per Player : <input id="per-player" type="text" /></p>
+              <button id="calculate" class="btn">Calculate</button>
+              <p class="margin-bottom">
+                Player Expenses: $ <span id="palyer-expenses">000</span>
+              </p>
+              <p>Manager : <input id="manager" type="text" /></p>
+              <p>Coach : <input id="coach" type="text" /></p>
+              <button id="total-calculate" class="btn">
+                Calculate Total
+              </button>
+              <p>Total: $ <span id="total-expenses">000</span></p>
+            </div>
+          </div>
+
+        </div>
+        <!--====== Side bar End ===== -->
+
+      </div>
+    </section>
+  </main>
+
+
+  <footer>
+    <p>&copy; 2024 - Choose Your Top 5 Playear</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
