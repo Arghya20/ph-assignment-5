@@ -139,6 +139,7 @@ body {
 }
 
 .btn {
+  width: 85%;
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
@@ -167,6 +168,10 @@ body {
   color: yellow;
   font-weight: bold;
   margin-top: 10px;
+}
+#total-expenses{
+  color: #f6ff10;
+  font-weight: bold;
 }
 /*======================
  Side Bar Section End
