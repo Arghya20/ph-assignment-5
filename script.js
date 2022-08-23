@@ -6,12 +6,6 @@ function getValueByElementId(id) {
   return getIdValueInt;
 }
 
-function showAlert(input) {
-  if (input <= 0 || isNaN(input)) {
-    alert("Enter a Number");
-    return;
-  }
-}
 // Empty Array ===========
 const playerAdd = [];
 
@@ -59,7 +53,11 @@ function addToSelected(deta) {
 document.getElementById("calculate").addEventListener("click", function () {
   const perPlayerValueInt = getValueByElementId("per-player");
 
-  showAlert(perPlayerValueInt);
+    //Show Alert Massage -------
+  if (perPlayerValueInt <= 0 || isNaN(perPlayerValueInt)) {
+    alert("Enter a Number");
+    return;
+  }
 
   const playerExpanses = perPlayerValueInt * playerAdd.length;
   const playerExpansesDisplay = document.getElementById("palyer-expenses");
@@ -75,6 +73,12 @@ document
 
     const managerAmount = getValueByElementId("manager");
     const coachAmount = getValueByElementId("coach");
+
+    //Show Alert Massage -------
+    if (managerAmount <= 0 || isNaN(managerAmount) && coachAmount <= 0 || isNaN(coachAmount) ) {
+      alert("Enter a Number");
+      return;
+    }
 
     const totalAmount = preViusTotalInt + coachAmount + managerAmount;
 
