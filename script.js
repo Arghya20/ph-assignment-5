@@ -1,3 +1,11 @@
+//Common function ============
+function getValueByElementId(id) {
+  const getId = document.getElementById(id);
+  const getIdValue = getId.value;
+  const getIdValueInt = parseInt(getIdValue);
+  return getIdValueInt;
+}
+// Empty Array ===========
 const playerAdd = [];
 
 function display(player) {
@@ -5,10 +13,10 @@ function display(player) {
   PlayerList.innerText = "";
 
   for (let i = 0; i < player.length; i++) {
-    let Pname = playerAdd[i].playerName;
+    let liName = playerAdd[i].playerName;
     const li = document.createElement("li");
     li.innerHTML = `
-    <li> ${i + 1 + " &nbsp; " + Pname}</li>
+    <li> ${i + 1 + " &nbsp; " + liName}</li>
     `;
 
     PlayerList.appendChild(li);
@@ -22,6 +30,7 @@ function addToSelected(deta) {
   const playerObj = {
     playerName: playerName,
   };
+
   playerAdd.push(playerObj);
   console.log(playerAdd);
   if (playerAdd.length > 5) {
@@ -41,16 +50,16 @@ function addToSelected(deta) {
 
 // BudGet Section ===========
 document.getElementById("calculate").addEventListener("click", function () {
-  const perPlayer = document.getElementById("per-player");
-  const perPlayerValue = perPlayer.value;
-  const perPlayerValueInt = parseInt(perPlayerValue);
+  const perPlayerValueInt = getValueByElementId("per-player");
+
+  if (perPlayerValueInt <= 0 || isNaN(perPlayerValueInt)) {
+    alert("Enter a Number");
+    return;
+  }
 
   const playerExpanses = perPlayerValueInt * playerAdd.length;
   const playerExpansesDisplay = document.getElementById("palyer-expenses");
   playerExpansesDisplay.innerText = playerExpanses;
-
-  if (perPlayerValueInt <= 0 || isNaN(perPlayerValueInt))
-    return alert("Enter a Number");
 });
 
 document
@@ -60,16 +69,11 @@ document
     const preViusTotalText = preViusTotal.innerText;
     const preViusTotalInt = parseInt(preViusTotalText);
 
-    const managerAmount = document.getElementById("manager");
-    const managerAmountValue = managerAmount.value;
-    const managerAmountValueInt = parseInt(managerAmountValue);
-
-    const coachAmount = document.getElementById("coach");
-    const coachAmountValue = coachAmount.value;
-    const coachAmountValueInt = parseInt(coachAmountValue);
+    const managerAmount = getValueByElementId("manager");
+    const coachAmount = getValueByElementId("coach");
 
     const totalAmount =
-      preViusTotalInt + coachAmountValueInt + managerAmountValueInt;
+      preViusTotalInt + coachAmount + managerAmount;
 
     const TotalExpenses = document.getElementById("total-expenses");
     TotalExpenses.innerText = totalAmount;
